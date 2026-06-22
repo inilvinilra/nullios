@@ -2,6 +2,8 @@
 
 iOS application acquisition and static analysis workbench for bug bounty researchers.
 
+![nullios TUI](assets/screenshot.jpeg)
+
 ## Install
 
 ```bash
