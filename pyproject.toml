@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nullios"
+version = "1.0.0"
+description = "iOS application acquisition and static analysis workbench for bug bounty researchers"
+requires-python = ">=3.10"
+dependencies = [
+    "textual>=0.58",
+    "rich>=13",
+    "requests>=2.31",
+    "cryptography>=42",
+    "construct>=2.10",
+]
+
+[project.optional-dependencies]
+store = ["ipatool-py>=0.4"]
+
+[project.scripts]
+nullios = "nullios.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["nullios*"]
+
+[tool.setuptools.package-data]
+nullios = ["tui.tcss"]
